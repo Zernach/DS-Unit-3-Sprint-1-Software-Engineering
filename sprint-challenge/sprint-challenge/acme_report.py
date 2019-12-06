@@ -5,13 +5,7 @@
 ### Completed By: Ryan Zernach
 
 """
-- `name` should be a random adjective from `['Awesome', 'Shiny', 'Impressive',
-  'Portable', 'Improved']` followed by a space and then a random noun from
-  `['Anvil', 'Catapult' 'Disguise' 'Mousetrap', '???']`, e.g. `'Awesome Anvil'`
-  and `Portable Catapult'` are both possible
-- `price` and `weight` should both be from 5 to 100 (inclusive and independent,
-  and remember - they're integers!)
-- `flammability` should be from 0.0 to 2.5 (floats)
+
 
 For the report, you should calculate and print the following values:
 
@@ -31,6 +25,13 @@ def generate_products(num_products=30):
     """
     - `generate_products()` should generate a given number of products (default
       30), randomly, and return them as a list
+      - `name` should be a random adjective from `['Awesome', 'Shiny',
+    'Impressive', 'Portable', 'Improved']` followed by a space and then
+    a random noun from `['Anvil', 'Catapult' 'Disguise' 'Mousetrap',
+    '???']`eg `'Awesome Anvil'` & `Portable Catapult' are both possible
+      - `price` and `weight` should both be from 5 to 100 (inclusive and
+    independent, and remember - they're integers!)
+      - `flammability` should be from 0.0 to 2.5 (floats)
     """
     products = []
     for range(0,num_products)
@@ -46,11 +47,27 @@ def generate_products(num_products=30):
 
 
 def inventory_report(products):
-    """
-    - `inventory_report()` takes a list of products, and prints a "nice" summary
-    """
-    pass  # TODO - your code! Loop over the products to calculate the report.
 
+    averageprice = 0
+    for product in products:
+        averageprice += product.price
+    averageprice /= products.length
+
+    averageweight = 0
+    for product in products:
+        averageweight += product.weight
+    averageweight /= products.length
+
+    averageflammability = 0
+    for product in products:
+        averageflammability += product.weight
+    averageflammability /= products.length
+
+    print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
+    print('Unique product names:', products.name.isunique())
+    print('Average price:', averageprice)
+    print('Average weight:', averageweight)
+    print('Average flammability:', averageflammability)
 
 if __name__ == '__main__':
     inventory_report(generate_products())

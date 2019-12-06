@@ -150,7 +150,7 @@ Following is useful starting code for `acme_report.py`:
 ```python
 #!/usr/bin/env python
 
-from random import randint, sample, uniform
+from random import randint, sample, uniform, random
 from acme import Product
 
 # Useful to use with random.sample to generate names
