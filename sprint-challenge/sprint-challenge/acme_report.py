@@ -11,6 +11,7 @@ For the report, you should calculate and print the following values:
 """
 
 from random import randint, sample, uniform, random
+import random
 from acme import Product
 
 # Useful to use with random.sample to generate names
@@ -30,14 +31,15 @@ def generate_products(num_products=30):
     independent, and remember - they're integers!)
       - `flammability` should be from 0.0 to 2.5 (floats)
     """
+    num_products = 30
     products = []
-    for range(0,num_products)
+    for x in range(0, num_products):
         name = (random.choice(ADJECTIVES))
         name += " "
         name += (random.choice(NOUNS))
         price = 10
         weight = (randint(5, 100))
-        flammability = (randint(0.0, 2.5))
+        flammability = (random.uniform(0.0, 2.5))
         prod = Product(name, price, weight, flammability)
         products.append(prod)
     return products

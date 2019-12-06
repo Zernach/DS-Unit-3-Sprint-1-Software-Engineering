@@ -45,7 +45,7 @@ class AcmeReportTests(unittest.TestCase):
         of products are all valid possible names to generate (adjective, space,
         noun, from the lists of possible words)
     """
-    
+
     products_test_report = generate_products()
 
     def test_default_num_products(self):
