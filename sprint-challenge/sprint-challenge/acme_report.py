@@ -5,10 +5,7 @@
 ### Completed By: Ryan Zernach
 
 """
-
-
 For the report, you should calculate and print the following values:
-
 - Number of unique product names in the product list
 - Average (mean) price, weight, and flammability of listed products
 """
@@ -47,6 +44,12 @@ def generate_products(num_products=30):
 
 
 def inventory_report(products):
+    #"""
+    #for some reason I can't use a doc-string here, IDK why
+    #inventory_report uses a list of products from generage_products above
+    # and prints number of unique values in name values, averageweight,
+    #averageprice, and averageflammability
+    #"""
 
     averageprice = 0
     for product in products:

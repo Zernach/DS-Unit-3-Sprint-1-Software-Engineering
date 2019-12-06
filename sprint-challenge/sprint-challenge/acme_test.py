@@ -33,7 +33,7 @@ class AcmeProductTests(unittest.TestCase):
         """
         Test default product price being 10.
         """
-        prod = Product('Test Product')
+        prod = Product()
         self.assertEqual(prod.price, 10)
 
 
@@ -45,24 +45,27 @@ class AcmeReportTests(unittest.TestCase):
         of products are all valid possible names to generate (adjective, space,
         noun, from the lists of possible words)
     """
+    
+    products_test_report = generate_products()
 
     def test_default_num_products(self):
         """
         checks that it really does receive a list of length 30
         """
-        prod = Product('Test Product')
-        self.assertEqual(prod.price, 10)
+        self.assertEqual(products_test_report.length, 30)
 
 
-    def test_default_num_products(self):
+    def test_legal_names(self):
         """
         checks that the generated names for a default batch of products are
         all valid possible names to generate (adjective, space, noun, from the
         lists of possible words)
         """
-        prod = Product('Test Product')
-        self.assertEqual(prod.price, 10)
+        for product in products_test_report:
+            self.assertIn(product.name, ADJECTIVES)
 
+        for product in products_test_report:
+            self.assertIn(product.name, NOUNS)
 
 if __name__ == '__main__':
     unittest.main()
