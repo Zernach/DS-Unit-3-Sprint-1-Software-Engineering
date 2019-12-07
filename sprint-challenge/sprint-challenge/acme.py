@@ -26,6 +26,7 @@ class Product:
         self.name = name
         self.price = price
         self.weight = weight
+        self.stealability = self.price/self.weight
         self.flammability = flammability
         self.identifier = random.randint(1000000, 9999999)
 
@@ -37,7 +38,6 @@ class Product:
           return "Kinda stealable.", otherwise return "Very stealable! Or
           unknown. Use discretion."
         """
-
         self.stealability = self.price/self.weight
 
         if self.stealability < 0.5:
@@ -77,12 +77,11 @@ class BoxingGlove(Product):
         """
         Boxing Glove Constructor
         """
-        super().__init__(name, price, weight, flammability)
+        super().__init__(name=name, price=price, weight=weight,
+                        flammabaility=flammability)
         self.weight = weight
         self.explodability = "...it's a glove."
 
-    def __init__(self, rounds=3, player1='Superman', player2='Stephanie'):
-        super().__init__(rounds, player1, player2)
 
     def punchability(self):
         """
