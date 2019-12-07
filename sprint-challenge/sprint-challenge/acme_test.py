@@ -22,30 +22,30 @@ class AcmeProductTests(unittest.TestCase):
     one tests default price, default weight, flammability, and explodability
     """
 
-    def check_default_weight(self):
-        """
-        Test default product weight being 20.
-        """
-        prod = Product()
-        self.assertEqual(self.weight, 20)
-
-    def test_default_product_price(self):
+    def test_default_price(self):
         """
         Test default product price being 10.
         """
         prod = Product()
         self.assertEqual(prod.price, 10)
 
-    def check_default_flammability(self):
+    def test_default_weight(self):
         """
         Test default product weight being 20.
         """
         prod = Product()
+        self.assertEqual(prod.weight, 20)
+
+    def test_default_flammability(self):
+        """
+        Test default flammability being 0.5.
+        """
+        prod = Product()
         self.assertEqual(prod.flammability, 0.5)
 
-    def check_explodability_function(self):
+    def test_explodability_function(self):
         """
-        Check explodability functionality
+        Test default product price being 10.
         """
         prod = Product()
         self.assertIn(prod.explodability, '...')
@@ -56,8 +56,8 @@ class AcmeReportTests(unittest.TestCase):
     -'test_default_num_products' - checks that it really does receive a list of
         length 30
     -'test_legal_names' - checks that the generated names for a default batch
-        of products are all valid possible names to generate (adjective, space,
-        noun, from the lists of possible words)
+       of products are all valid possible names to generate (adjective, space,
+       noun, from the lists of possible words)
     """
 
     def test_default_num_products(self):
@@ -81,6 +81,7 @@ class AcmeReportTests(unittest.TestCase):
 
         for product in products_test_report:
             self.assertIn(product.name, NOUNS)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -56,17 +56,19 @@ def inventory_report(products):
     averageprice = 0
     for product in products:
         averageprice += product.price
-    averageprice /= products.length
+    averageprice /= len(products)
 
     averageweight = 0
     for product in products:
         averageweight += product.weight
-    averageweight /= products.length
+    averageweight /= len(products)
 
     averageflammability = 0
     for product in products:
         averageflammability += product.weight
-    averageflammability /= products.length
+    averageflammability /= len(products)
+
+    list_of_names
 
     print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
     print('Unique product names:', products.name.isunique())
