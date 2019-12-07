@@ -1,8 +1,8 @@
 # Data Science Unit 3 Sprint Challenge 1
 
-## Software Engineering - the Acme Way
+# Software Engineering - the Acme Way
 
-### Completed By: Ryan Zernach
+# Completed By: Ryan Zernach
 
 import random
 
@@ -14,11 +14,12 @@ class Product:
         - `price` (integer with default value 10)
         - `weight` (integer with default value 20)
         - `flammability` (float with default value 0.5)
-        - `identifier` (integer, automatically genererated as a random (uniform)
+        - `identifier` (integer, automatically genererated as random (uniform)
         number anywhere from 1000000 to 9999999
     """
 
-    def __init__(self, name='Untitled_Product', price=10, weight=20, flammability=0.5):
+    def __init__(self, name='Untitled_Product', price=10, weight=20,
+        flammability=0.5):
         """
         Product Constructor
         """
@@ -28,13 +29,13 @@ class Product:
         self.flammability = flammability
         self.identifier = random.randint(1000000, 9999999)
 
-
     def stealability(self):
         """
         calculates the price divided by the weight, and then
-          returns a message: if the ratio is less than 0.5: "Not so stealable...",
-          if it is greater or equal to 0.5 but less than 1.0 return "Kinda
-          stealable.", otherwise return "Very stealable! Or unknown. Use discretion."
+          returns a message: if the ratio is less than 0.5: "Not so
+          stealable...", if it is greater or equal to 0.5 but less than 1.0
+          return "Kinda stealable.", otherwise return "Very stealable! Or
+          unknown. Use discretion."
         """
 
         self.stealability = self.price/self.weight
@@ -47,13 +48,12 @@ class Product:
             message1 = "Very stealable! Or unknown. Use discretion."
         return message1
 
-
     def explodability(self):
         """
         calculates the flammability times the weight, and then
-          returns a message: if the product is less than 10 return "...fizzle.", if it is
-          greater or equal to 10 but less than 50 return "...boom!", and otherwise
-          return "...BABOOM!! Or unknown. Use discretion."
+          returns a message: if the product is less than 10 return "...fizzle."
+          if it is greater or equal to 10 but less than 50 return "...boom!",
+          and otherwise return "...BABOOM!! Or unknown. Use discretion."
         """
         self.explodability = self.flammability*self.weight
 
@@ -72,7 +72,8 @@ class BoxingGlove(Product):
     - Override the `explode` method to always return "...it's a glove."
     """
 
-    def __init__(self, name='Boxing Glove', price=10, weight=10, flammability=0.5):
+    def __init__(self, name='Boxing Glove', price=10, weight=10,
+        flammability=0.5):
         """
         Boxing Glove Constructor
         """

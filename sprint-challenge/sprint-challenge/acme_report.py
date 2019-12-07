@@ -1,8 +1,8 @@
 # Data Science Unit 3 Sprint Challenge 1
 
-## Software Engineering - the Acme Way
+# Software Engineering - the Acme Way
 
-### Completed By: Ryan Zernach
+# Completed By: Ryan Zernach
 
 """
 For the report, you should calculate and print the following values:
@@ -46,12 +46,12 @@ def generate_products(num_products=30):
 
 
 def inventory_report(products):
-    #"""
-    #for some reason I can't use a doc-string here, IDK why
-    #inventory_report uses a list of products from generage_products above
+    # """
+    # for some reason I can't use a doc-string here, IDK why
+    # inventory_report uses a list of products from generage_products above
     # and prints number of unique values in name values, averageweight,
-    #averageprice, and averageflammability
-    #"""
+    # averageprice, and averageflammability
+    # """
 
     averageprice = 0
     for product in products:
